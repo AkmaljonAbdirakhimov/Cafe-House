@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: antiquewhite;
+  height: 200vh;
+}
+
+.top-header {
+  background: black;
+}
+
+.top-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-header .container .logo-container {
+  padding: 15px 0;
+  margin-right: auto;
+}
+
+.top-header .container .logo-container a {
+  text-decoration: none;
+}
+
+.top-header .container .logo-container a .site-logo {
+  vertical-align: baseline;
+}
+
+.top-header .container .logo-container a .site-name {
+  color: #c79c60;
+  font-family: "Damion", cursive;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.top-header .container .hamburger-menu {
+  display: none;
+}
+
+.top-header .container .nav {
+  padding: 15px 0;
+}
+
+.top-header .container .nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.top-header .container .nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 15px 20px 30px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.top-header .container .nav ul li a:hover, .top-header .container .nav ul li a:focus, .top-header .container .nav ul li a.active {
+  color: #c79c60;
+}
+
+.top-header .container .nav ul li a.active {
+  background: url(../images/logo.png) no-repeat, url(../images/nav-underline.png) no-repeat;
+  background-size: 20px, 74px;
+  background-position: 0% 30%, center bottom;
+}
+
+@media screen and (max-width: 769px) {
+  .top-header {
+    background: black;
+  }
+  .top-header .container .hamburger-menu {
+    position: fixed;
+    display: block;
+    color: #c79c60;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 15px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .top-header .container .nav {
+    display: none;
+    position: fixed;
+    top: 64px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .top-header .container .nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-header .container .nav ul li {
+    padding: 15px 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

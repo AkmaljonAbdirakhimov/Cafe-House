@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: antiquewhite;
+	height: 200vh;
+}
+.top-header {
+	background: black;
+
+	.container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		.logo-container {
+			padding: 15px 0;
+			margin-right: auto;
+			a {
+				text-decoration: none;
+				.site-logo {
+					vertical-align: baseline;
+				}
+
+				.site-name {
+					color: #c79c60;
+					font-family: "Damion", cursive;
+					display: inline-block;
+					vertical-align: bottom;
+					margin: 0;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+		.hamburger-menu {
+			display: none;
+		}
+		.nav {
+			padding: 15px 0;
+			ul {
+				list-style-type: none;
+				display: flex;
+				margin: 0;
+				padding: 0;
+				li {
+					a {
+						color: white;
+						text-decoration: none;
+						text-transform: uppercase;
+						padding: 15px 15px 20px 30px;
+						font-weight: 700;
+						cursor: pointer;
+						transition: color 0.3s ease;
+
+						&:hover,
+						&:focus,
+						&.active {
+							color: #c79c60;
+						}
+
+						&.active {
+							background: url(../images/logo.png) no-repeat,
+								url(../images/nav-underline.png) no-repeat;
+							background-size: 20px, 74px;
+							background-position: 0% 30%, center bottom;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.top-header {
+		background: black;
+
+		.container {
+			.hamburger-menu {
+				position: fixed;
+				display: block;
+				color: #c79c60;
+				font-size: 30px;
+				background: rgba($color: #000000, $alpha: 0.8);
+				padding: 5px 15px;
+				cursor: pointer;
+				z-index: 1;
+			}
+			.nav {
+				display: none;
+				position: fixed;
+				top: 64px;
+				padding: 10px;
+				background: rgba($color: #000000, $alpha: 0.8);
+
+				ul {
+					flex-direction: column;
+					li {
+						padding: 15px 0;
+					}
+				}
+			}
+		}
+	}
+}
